@@ -26,6 +26,7 @@ services:
         volumes:
             - ./src:/var/www/html
         working_dir: /var/www/html
+        entrypoint: sh -c "php-fpm"
         depends_on:
             - mysql
         container_name: php
